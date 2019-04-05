@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .parent{
+            width:500px;
+            height: 500px;
+            padding: 100px;
+            background: #ccc;
+            position: relative;
+        }
+        .children{
+            width: 100%;
+            /* height: 100px; */
+            background-color: red;
+            position: relative;
+            /* 如果子元素定位了并且设置left0 top0就不会被父元素padding影响位置 */
+            left: 0px;
+            /* 子元素设置了top0 又设置了bottom0 表示要同时到顶部和底部 
+            只能把自己变高 一定要是绝对定位或者固定定位才有*/
+            top: 0;
+            bottom: 0;
+
+            /* height: 100%; */
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="children"></div>
+    </div>
+</body>
+</html>

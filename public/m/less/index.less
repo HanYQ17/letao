@@ -1,0 +1,144 @@
+@import './base.less';
+
+
+#main {
+    flex: 1;
+    overflow: hidden;
+
+    .mui-scroll-wrapper {
+        position: relative;
+        height: 100%;
+
+        .mui-scroll {
+
+            // 导航
+            #nav {
+                padding: 10px 10px;
+
+                .mui-row {
+                    >div {
+                        a {
+                            display: block; // 一定要加,加了才有点击范围
+
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // banner
+            #banner {
+                .dflex();
+                padding: 0 10px;
+
+                .left {
+                    flex: 2;
+
+                    .mui-row {
+                        >div {
+                            a {
+                                display: block;
+
+                                img {
+                                    width: 100%;
+
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .right {
+                    flex: 1;
+                    background-color: #ccc;
+
+                    a {
+                        display: block;
+
+                        img {
+                            width: 100%;
+                            height: 2.36rem;
+
+                        }
+                    }
+                }
+            }
+
+            //品牌专区
+            #brand {
+                padding: 10px 10px;
+
+                .top {
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .center {
+                    .mui-row {
+                        >div {
+                            a {
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            //运动专区
+            #exercise {
+                .pic {
+                    padding: 0 10px;
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .content {
+                    .mui-row {
+                        >div {
+                            
+                            margin-bottom: 10px;
+
+                            &:nth-child(2n-1){
+                                padding: 0px 5px 0px 10px;
+                            }
+                            &:nth-child(2n){
+                                padding: 0px 10px 0px 5px;
+                            }
+
+                            a {
+                                display: block;
+                                text-align: center;
+                                background-color: #fff;
+
+                                img {
+                                    width: 100%;
+                                }
+
+                                .tit {
+                                    font-size: 0.16rem;
+                                    line-height: .25rem
+                                }
+
+                                .price {
+                                    font-size: 0.16rem;
+                                }
+
+                                button {
+                                    margin-bottom: 10px;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

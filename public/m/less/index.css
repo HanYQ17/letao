@@ -1,0 +1,166 @@
+html {
+  font-size: 26.66667vw;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: .14rem;
+  line-height: .14rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+#header {
+  background-color: #006699;
+  height: .45rem;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header .left {
+  width: .45rem;
+  height: .45rem;
+}
+#header .conter {
+  flex: 1;
+  color: #fff;
+  text-align: center;
+}
+#header .conter h4 {
+  font-weight: normal;
+}
+#header .right {
+  width: .45rem;
+  height: .45rem;
+  text-align: center;
+  line-height: .45rem;
+}
+#header .right a {
+  color: #fff;
+}
+#main {
+  flex: 1;
+  width: 100vw;
+  height: 100%;
+}
+#footer {
+  height: .45rem;
+  width: 100vw;
+  background-color: #006699;
+}
+#footer .mui-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer .mui-row .mui-col-xs-3 {
+  flex: 1;
+}
+#footer .mui-row .mui-col-xs-3 a {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: .45rem;
+}
+#footer .mui-row .mui-col-xs-3 a.active {
+  color: orange;
+}
+#main {
+  flex: 1;
+  overflow: hidden;
+}
+#main .mui-scroll-wrapper {
+  position: relative;
+  height: 100%;
+}
+#main .mui-scroll-wrapper .mui-scroll #nav {
+  padding: 10px 10px;
+}
+#main .mui-scroll-wrapper .mui-scroll #nav .mui-row > div a {
+  display: block;
+}
+#main .mui-scroll-wrapper .mui-scroll #nav .mui-row > div a img {
+  width: 100%;
+}
+#main .mui-scroll-wrapper .mui-scroll #banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+#main .mui-scroll-wrapper .mui-scroll #banner .left {
+  flex: 2;
+}
+#main .mui-scroll-wrapper .mui-scroll #banner .left .mui-row > div a {
+  display: block;
+}
+#main .mui-scroll-wrapper .mui-scroll #banner .left .mui-row > div a img {
+  width: 100%;
+}
+#main .mui-scroll-wrapper .mui-scroll #banner .right {
+  flex: 1;
+  background-color: #ccc;
+}
+#main .mui-scroll-wrapper .mui-scroll #banner .right a {
+  display: block;
+}
+#main .mui-scroll-wrapper .mui-scroll #banner .right a img {
+  width: 100%;
+  height: 2.36rem;
+}
+#main .mui-scroll-wrapper .mui-scroll #brand {
+  padding: 10px 10px;
+}
+#main .mui-scroll-wrapper .mui-scroll #brand .top img {
+  width: 100%;
+}
+#main .mui-scroll-wrapper .mui-scroll #brand .center .mui-row > div a img {
+  width: 100%;
+}
+#main .mui-scroll-wrapper .mui-scroll #exercise .pic {
+  padding: 0 10px;
+}
+#main .mui-scroll-wrapper .mui-scroll #exercise .pic img {
+  width: 100%;
+}
+#main .mui-scroll-wrapper .mui-scroll #exercise .content .mui-row > div {
+  margin-bottom: 10px;
+}
+#main .mui-scroll-wrapper .mui-scroll #exercise .content .mui-row > div:nth-child(2n-1) {
+  padding: 0px 5px 0px 10px;
+}
+#main .mui-scroll-wrapper .mui-scroll #exercise .content .mui-row > div:nth-child(2n) {
+  padding: 0px 10px 0px 5px;
+}
+#main .mui-scroll-wrapper .mui-scroll #exercise .content .mui-row > div a {
+  display: block;
+  text-align: center;
+  background-color: #fff;
+}
+#main .mui-scroll-wrapper .mui-scroll #exercise .content .mui-row > div a img {
+  width: 100%;
+}
+#main .mui-scroll-wrapper .mui-scroll #exercise .content .mui-row > div a .tit {
+  font-size: 0.16rem;
+  line-height: 0.25rem;
+}
+#main .mui-scroll-wrapper .mui-scroll #exercise .content .mui-row > div a .price {
+  font-size: 0.16rem;
+}
+#main .mui-scroll-wrapper .mui-scroll #exercise .content .mui-row > div a button {
+  margin-bottom: 10px;
+}

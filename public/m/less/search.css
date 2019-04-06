@@ -101,3 +101,61 @@ h6 {
 #footer .mui-row .mui-col-xs-3 a.active {
   color: orange;
 }
+#main {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+#main form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .1rem;
+  height: .54rem;
+}
+#main form input {
+  margin-bottom: 0;
+  border: 0.5px solid #006699;
+  height: .35rem;
+  font-size: .14rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: 0;
+}
+#main form button {
+  height: .35rem;
+  width: .6rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  font-size: .14rem;
+  background-color: #006699;
+}
+#main .history {
+  flex: 1;
+  overflow: hidden;
+}
+#main .history .mui-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#main .history .mui-card .mui-card-header {
+  height: .44rem;
+}
+#main .history .mui-card .mui-card-header span:nth-child(2) {
+  color: #666;
+}
+#main .history .mui-card .mui-card-content {
+  flex: 1;
+  margin-bottom: .25rem;
+}
+#main .history .mui-card .mui-card-content .mui-scroll-wrapper {
+  position: relative;
+  height: 100%;
+}
+#main .history .mui-card .mui-card-content .mui-scroll-wrapper .mui-scroll ul li::after {
+  left: 0;
+}
+#main .history .mui-card .mui-card-content .mui-scroll-wrapper .mui-scroll ul li span {
+  font-size: .14rem;
+}

@@ -119,25 +119,31 @@ h6 {
   background-color: #fff;
   margin-bottom: .02rem;
 }
+#main .left .mui-scroll .mui-table-view .mui-table-view-cell.active {
+  background-color: pink;
+}
 #main .right {
   width: 75%;
   position: relative;
   height: 100%;
 }
 #main .right .mui-scroll .mui-row {
-  padding: 7px;
+  padding: .07rem;
 }
 #main .right .mui-scroll .mui-row > div {
-  margin-bottom: 5px;
+  margin-bottom: .05rem;
 }
 #main .right .mui-scroll .mui-row > div a {
   display: block;
   background-color: #fff;
   height: .7rem;
+  margin-right: .05rem;
 }
 #main .right .mui-scroll .mui-row > div a img {
   width: 100%;
 }
 #main .right .mui-scroll .mui-row > div a p {
   text-align: center;
+  font-size: .14rem;
+  overflow: hidden;
 }

@@ -8,7 +8,7 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>自己的移动端乐淘主页</title>
+    <title>分类页面</title>
     <!-- 引入mui.css -->
     <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
     <!-- 引入font-awesome字体图标库  该字体图标需要两个类名 -->
@@ -16,7 +16,7 @@
     <!-- 引入自己的css样式 -->
     <link rel="stylesheet" href="./less/category.css">
 </head>
-
+ 
 <body>
     <!-- 头部 -->
     <header id="header">
@@ -31,12 +31,12 @@
             </form>
         </div>
         <div class="right">
-            <a href="#">
+            <a href="search.html">
                 <i class="fa fa-search"></i>
             </a>
         </div>
     </header>
-
+ 
 
     <!-- 主体 -->
     <main id="main">
@@ -239,10 +239,6 @@
 
             </div>
         </div>
-
-
-
-
     </main>
 
 
@@ -262,7 +258,7 @@
                 </a>
             </div>
             <div class="mui-col-xs-3">
-                <a href="#">
+                <a href="./login.html">
                     <i class="fa fa-home"></i>
                     <span>购物车</span>
                 </a>
@@ -280,6 +276,34 @@
 
     <!-- MUI不依赖jQuery -->
     <script src="./lib/mui/js/mui.min.js"></script>
+
+    <!-- 引入Zepto.js  移动端使用这个,pc端使用jquery-->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 引入模板 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+
+    <!-- 写模板 左分类 -->
+    <script type="text/html" id="categoryLeftTpl">
+        {{each rows value }}<!-- value是值 -->
+            <li class="mui-table-view-cell" data-id="{{value.id}}">{{value.categoryName}}</li>
+        {{/each}}
+    </script>
+    <!-- 右分类 -->
+    <script type="text/html" id="categoryRightTpl">
+        {{if rows.length>0}}
+            {{each rows value}}
+                <div class="mui-col-xs-4">
+                    <a href="#">
+                        <img src="{{value.brandLogo}}" alt="">
+                        <p>{{value.brandName}}</p>
+                    </a>
+                </div>
+            {{/each}}
+        {{else}}
+            <p>没有这类的商品</p>
+        {{/if}}
+    </script>
+
     <!-- 引入自己的js文件 -->
     <script src="./js/category.js"></script>
 </body>

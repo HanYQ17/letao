@@ -1,0 +1,90 @@
+@import 'base.less';
+
+
+
+#main {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+
+
+
+    form {
+        .dflex();
+        padding: .1rem;
+        height: .54rem;
+
+        input {
+            margin-bottom: 0;
+            border: 0.5px solid @mian-color;
+            height: .35rem;
+            font-size: .14rem;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-right: 0;
+        }
+
+        button {
+            height: .35rem;
+            width: .6rem;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            font-size: .14rem;
+            background-color: @mian-color;
+        }
+    }
+
+    .history {
+        flex: 1;
+        overflow: hidden;
+
+
+        .mui-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+
+
+            .mui-card-header {
+                height: .44rem;
+
+                span:nth-child(2) {
+                    color: #666;
+                }
+            }
+
+            .mui-card-content {
+                flex: 1;
+                margin-bottom: .25rem;
+
+                .mui-scroll-wrapper {
+                    position: relative;
+                    height: 100%;
+
+                    .mui-scroll {
+                        ul {
+                            li {
+                                &::after {
+                                    left: 0;
+                                }
+
+                                span {
+                                    font-size: .14rem;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+
+
+
+
+
+
+
+}

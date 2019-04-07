@@ -125,3 +125,34 @@ h6 {
 #footer .mui-row .mui-col-xs-3 a.active {
   color: orange;
 }
+#main {
+  position: relative;
+}
+#main .mui-card-header span.active {
+  color: red;
+}
+#main .mui-card-content .mui-row > div .product {
+  text-align: center;
+  border: 1px solid #ccc;
+  margin: .05rem;
+  border-radius: 5px;
+}
+#main .mui-card-content .mui-row > div .product img {
+  width: 100%;
+}
+#main .mui-card-content .mui-row > div .product .description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: .14rem;
+  line-height: .16rem;
+}
+#main .mui-card-content .mui-row > div .product p {
+  font-size: .14rem;
+}
+#main .mui-card-content .mui-row > div .product button {
+  font-size: .14rem;
+  margin-bottom: .1rem;
+}

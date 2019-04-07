@@ -4,7 +4,7 @@
 html{
     font-size: 26.66667vw;
 }
-
+ 
 
 .dflex(){
     display: flex;
@@ -24,6 +24,33 @@ body{
     .dflex();
     flex-direction: column;
     height: 100vh;
+}
+
+#main{
+    form {
+        .dflex();
+        padding: .1rem;
+        height: .54rem;
+
+        input {
+            margin-bottom: 0;
+            border: 0.5px solid @mian-color;
+            height: .35rem;
+            font-size: .14rem;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-right: 0;
+        }
+
+        button {
+            height: .35rem;
+            width: .6rem;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            font-size: .14rem;
+            background-color: @mian-color;
+        }
+    }
 }
 
 h1,

@@ -53,7 +53,9 @@
                     <div class="mui-scroll-wrapper">
                         <div class="mui-scroll">
                             <ul class="mui-table-view">
-                                <li class="mui-table-view-cell">女装<span class="mui-badge fa fa-close"></span></li>
+                                <li class="mui-table-view-cell">
+                                    <a href="#">女装</a>
+                                    <span class="mui-badge fa fa-close"></span></li>
                                 <li class="mui-table-view-cell">高跟鞋<span class="mui-badge fa fa-close"></span></li>
                                 <li class="mui-table-view-cell">运动装<span class="mui-badge fa fa-close"></span></li>
                                 <li class="mui-table-view-cell">女装<span class="mui-badge fa fa-close"></span></li>
@@ -128,13 +130,19 @@
     <!-- 引入模板 -->
     <script src="./lib/artTemplate/template-web.js"></script>
     <!-- 写模板 -->
-    <script id="historyTpl" type="text/html">
-        {{each rows value index}}
-            <li class="mui-table-view-cell">
-                {{value}}
-            <span class="mui-badge fa fa-close" data-index="{{index}}"></span></li>
-        {{/each}}
+    <script type="text/html" id="temp">
+        {{if list <= 0}}
+        <li class="mui-table-view-cell">当前没有浏览记录</li>
+        {{else}}
+            {{each list value index}}
+                <li class="mui-table-view-cell">
+                    <a href="productlist.html?search={{value}}">{{value}}</a>
+                    <span class="mui-badge fa fa-close" data-index="{{index}}"></span></li>
+            {{/each}}
+        {{/if}}
     </script>
+    
+    
 
     <!-- 引入自己的js文件 -->
     <script src="./js/search.js"></script>

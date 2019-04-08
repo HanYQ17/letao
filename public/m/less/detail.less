@@ -1,0 +1,94 @@
+@import './base.less';
+
+
+
+
+
+
+#main {
+    
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    //区域滚动
+    .mui-scroll-wrapper {
+        .mui-scroll {
+            .mui-card {
+                .mui-card-header {
+                    a {
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .mui-card-content {
+                    .mui-table-view {
+                        .tit {}
+
+                        .price {}
+
+                        .size {
+                            div {
+                                span {
+                                    display: inline-block;
+                                    font-size: .12rem;
+                                    line-height: 1.42;
+                                    margin: .05rem .02rem;
+                                }
+
+                                button {
+                                    margin-bottom: .05rem;
+                                    &.active{
+                                        background-color: #f0ad4e;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+#footer {
+    background-color: #ccc;
+
+    .mui-row {
+        height: 100%;
+
+        >div {
+            .left {
+                .dflex();
+
+                a {
+                    i {
+                        font-size: .2rem;
+                        color: #333;
+                    }
+                }
+            }
+
+            .center {
+                .dflex();
+
+                button {
+                    width: 100%;
+                    margin: 0 0.05rem;
+                }
+            }
+
+            .right {
+                .dflex();
+
+                button {
+                    width: 100%;
+                    margin: 0 0.05rem;
+                }
+            }
+        }
+    }
+}

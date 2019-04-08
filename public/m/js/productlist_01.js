@@ -1,23 +1,10 @@
 $(function () {
     var search;  //声明一个全局变量,因为多处函数也要用到,全局变量尽量放在最前面
-    var page;  //变成全局变量
 
     searchProduct(); //调用搜索商品的函数
     nowSearchProduct(); //调用当前页面商品搜索的函数
     sortProduct(); //调用商品的排序
     pullRefresh(); //调用初始化下拉刷新和上拉加载
-    gotoDetail(); //跳转到商品详情页
-
-
-    //跳转到商品详情页
-    function gotoDetail(){
-        $('.mui-card-content').on('tap','.product-buy',function(){
-            var id = $(this).data('id');
-            console.log(id);
-            location = 'detail.html?id='+id;
-        })
-    }
-
 
     // 定义一个搜索商品的函数
     function searchProduct() {
@@ -103,9 +90,6 @@ $(function () {
                 // console.log(data.data);
                 var html = template('productTmp', data);  //调用模板
                 $('.productlist-main .mui-row').html(html); //手动添加到页面上
-
-                mui('#pullrefresh').pullRefresh().refresh(true); //每次数据刷新完成后重置上拉加载
-                page = 1;  //还要重置一下page 下一次下拉又要从第一页开始
             }
         })
     }
@@ -140,11 +124,9 @@ $(function () {
                     success: function (data) {
                         var html = template('productTmp', data);
                         $('.productlist-main .mui-row').html(html);
-                        
                     }
                 })
                 mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //结束转圈圈 调用结束方法
-                
             }, 1500);
         }
 
@@ -156,7 +138,7 @@ $(function () {
              3. 结束转圈圈
              4. 如果没有数据 不仅要结束转圈圈还要传一个参数 true 会提示没有数据了
          */
-        
+        var page = 1;
         function pullupRefresh() {
             setTimeout(function () {  //为了模拟请求延迟添加一个定时器
                 page++; //指定一个page每次上拉就page++ 变成下一页
@@ -175,7 +157,6 @@ $(function () {
                         } else {
                             mui('#pullrefresh').pullRefresh().endPullupToRefresh(true); //没有数据结转圈圈 并提示没有数据了,参数为true提示没有更多数据了
                         }
-                        
                     }
                 })
             }, 1500);

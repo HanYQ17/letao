@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 添加视口 -->
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情</title>
+    <!-- 引入mui.css -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <!-- 引入font-awesome字体图标库  该字体图标需要两个类名 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 引入自己的css样式 -->
+    <link rel="stylesheet" href="./less/detail.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header id="header">
+        <div class="left">
+            <a href="#">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="conter">
+            <h4>商品详情</h4>
+        </div>
+        <div class="right">
+
+        </div>
+    </header>
+
+
+    <!-- 主体 -->
+    <main id="main">
+        
+
+
+
+    </main>
+
+
+    <!-- 底部 -->
+    <footer id="footer">
+        <div class="mui-row">
+            <div class="mui-col-xs-2">
+                <div class="left">
+                    <a href="#">
+                        <i class="fa fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mui-col-xs-5">
+                <div class="center">
+                    <button type="button" class="mui-btn mui-btn-danger btn-add-cart">加入购物车</button>
+                </div>
+
+            </div>
+            <div class="mui-col-xs-5">
+                <div class="right">
+                    <button type="button" class="mui-btn mui-btn-warning">立即购买</button>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <!-- MUI不依赖jQuery -->
+    <script src="./lib/mui/js/mui.min.js"></script>
+
+    <!-- 引入Zepto.js  移动端使用这个,pc端使用jquery-->
+    <script src="./lib/zepto/zepto.min.js"></script>
+
+    <!-- 引入模板 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 写模板 -->
+    <script type="text/html" id="detailTmp">
+        
+        <!-- 区域滚动 -->
+        <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <div class="mui-card">
+                        <!--页眉，放置标题-->
+                        <div class="mui-card-header">
+                            <div class="mui-slider">
+                                <div class="mui-slider-group mui-slider-loop">
+                                    <!--支持循环，需要重复图片节点-->
+                                    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{pic[pic.length-1].picAddr}}" /></a></div>
+                                    {{each pic value}}
+                                    <div class="mui-slider-item"><a href="#"><img src="{{value.picAddr}}" /></a></div>
+                                    {{/each}}
+                                    <!--支持循环，需要重复图片节点-->
+                                    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{pic[0].picAddr}}" /></a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--内容区-->
+                        <div class="mui-card-content">
+                            <ul class="mui-table-view">
+                                <li class="mui-table-view-cell tit">
+                                    <p>
+                                        名称 : <strong>{{proName}}</strong>
+                                    </p>
+                                </li>
+                                <li class="mui-table-view-cell price">
+                                    价格 : <span>{{price}}</span>
+                                    <del>{{oldPrice}}</del>
+                                </li>
+                                <li class="mui-table-view-cell size">
+                                    <div>
+                                        <span>尺码 :</span>
+                                        {{each size value}}
+                                        <button type="button" class="mui-btn btn-size" data-size="{{value}}">{{value}}</button>
+                                        {{/each}}
+                                    </div>
+                                </li>
+                                <li class="mui-table-view-cell num">
+                                    <span>数量 : </span>
+                                    <div class="mui-numbox" data-numbox-step='1' data-numbox-min='1' data-numbox-max='{{num}}'>
+                                        <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+                                        <input class="mui-numbox-input" type="number" value="1" />
+                                        <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+                                    </div>
+                                    <span>剩余 : {{num}}件</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--页脚，放置补充信息或支持的操作-->
+                        <!-- <div class="mui-card-footer">页脚</div> -->
+                    </div>
+                </div>
+            </div>
+        
+    </script>
+
+
+    <!-- 引入自己的js文件 -->
+    <script src="./js/detail.js"></script>
+</body>
+
+</html>

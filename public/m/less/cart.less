@@ -1,0 +1,55 @@
+@import "base.less";
+
+#main {
+    overflow: hidden;
+    .cart-list {
+        .product {
+            position: relative;
+            .icon{
+                position: absolute;
+                right: 0.02rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .mui-pull-left {
+                img {
+                    max-width: .8rem;
+                    min-height: .8rem;
+                }
+
+                .mui-checkbox {
+                    text-align: center;
+
+                    .checkbox_cart {
+                        position: static;
+                    }
+                }
+
+            }
+
+            .mui-media-body {
+                white-space: normal;
+                color: #898989;
+
+                .product-name {
+                    font-size: 0.14rem;
+                    line-height: .16rem;
+                }
+
+                .product-price {
+                    margin: .1rem;
+
+                    span {
+                        color: red;
+                    }
+                }
+
+                .product-params {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}

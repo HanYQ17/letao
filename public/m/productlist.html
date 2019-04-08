@@ -131,9 +131,10 @@
     <script src="./lib/artTemplate/template-web.js"></script>
     <!-- 写模板 -->
     <script type="text/html" id="productTmp">
-        <!-- 遍历数组的语法 -->
+        <!-- 遍历数组的语法,,一级属性前面自动就有obj.,所以只要写data就可以 -->
         {{each data value}}
             <div class="mui-col-xs-6">
+                <!-- <a href="#"> -->
                 <div class="product">
                     <img src="{{value.pic[0].picAddr}}" alt="">
                     <p class="description">{{value.proName}}</p>
@@ -141,8 +142,9 @@
                         <span>${{value.price}}</span>
                         <del>${{value.oldPrice}}</del>
                     </p>
-                    <button type="button" class="mui-btn mui-btn-primary product-buy">立即购买</button>
+                    <button type="button" class="mui-btn mui-btn-primary product-buy" data-id={{value.id}}>立即购买</button>
                 </div>
+                <!-- </a> -->
             </div>
         {{/each}}
     </script>

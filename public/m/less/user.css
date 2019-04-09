@@ -125,66 +125,23 @@ h6 {
 #footer .mui-row .mui-col-xs-3 a.active {
   color: orange;
 }
-#main {
-  overflow: hidden;
-  height: 100%;
-  position: relative;
+#main .mui-table-view li {
+  padding: 0.11rem 0.15rem;
 }
-#main .cart-list .product {
-  position: relative;
+#main .mui-table-view .userInfo a #head {
+  line-height: .4rem;
+  max-width: .4rem;
+  height: .4rem;
 }
-#main .cart-list .product .icon {
-  position: absolute;
-  right: 0.02rem;
-  top: 50%;
-  transform: translateY(-50%);
+#main .mui-table-view .userInfo a .phone p {
+  font-size: .14rem;
+  line-height: .22rem;
 }
-#main .cart-list .product .mui-pull-left img {
-  max-width: .8rem;
-  min-height: .8rem;
-}
-#main .cart-list .product .mui-pull-left .mui-checkbox {
-  text-align: center;
-}
-#main .cart-list .product .mui-pull-left .mui-checkbox .checkbox_cart {
-  position: static;
-}
-#main .cart-list .product .mui-media-body {
-  white-space: normal;
-  color: #898989;
-}
-#main .cart-list .product .mui-media-body .product-name {
-  font-size: 0.14rem;
-  line-height: .16rem;
-}
-#main .cart-list .product .mui-media-body .product-price {
-  margin: .1rem;
-}
-#main .cart-list .product .mui-media-body .product-price span {
-  color: red;
-}
-#main .cart-list .product .mui-media-body .product-params {
-  display: flex;
-  justify-content: space-between;
-}
-#order {
-  height: 0.35rem;
+#main .mui-table-view .out #out {
   width: 100%;
-  background-color: pink;
-}
-#order .mui-card {
-  margin: 0;
-}
-#order .mui-card .mui-card-header {
-  padding: 0;
-}
-#order .mui-card .mui-card-header .rental {
-  color: red;
-  font-size: .14rem;
-  margin-left: .2rem;
-}
-#order .mui-card .mui-card-header .btn_order .btn_ord {
-  height: 0.35rem;
-  font-size: .14rem;
-  padding: .06rem .14rem;
+  position: relative;
+  right: 0;
+  font-size: .18rem;
+  top: 0;
+  transform: translateY(0);
 }

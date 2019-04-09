@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 添加视口 -->
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人中心</title>
+    <!-- 引入mui.css -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <!-- 引入font-awesome字体图标库  该字体图标需要两个类名 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 引入自己的css样式 -->
+    <link rel="stylesheet" href="./less/user.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header id="header">
+        <div class="left">
+            <a href="#">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="conter">
+            <h4>个人中心</h4>
+        </div>
+        <div class="right">
+
+        </div>
+    </header>
+
+
+    <!-- 主体 -->
+    <main id="main">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell mui-media userInfo">
+                <a href="javascript:;">
+                    <img class="mui-media-object mui-pull-left" id="head" src="./images/user.jpg">
+                    <div class="mui-media-body phone ">
+                        <p class='mui-ellipsis'>用户名 : itcast</p>
+                        <p class='mui-ellipsis'>绑定手机: 15102324243</p>
+                    </div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">账号与安全</a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">我的购物车</a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">收货地址管理</a>
+            </li>
+            <li class="mui-table-view-cell out">
+                <button type="button" class="mui-btn" id="out">退出登录</button>
+            </li>
+        </ul>
+    </main>
+
+    <!-- 底部 -->
+    <footer id="footer">
+        <div class="mui-row">
+            <div class="mui-col-xs-3">
+                <a href="./index.html">
+                    <i class="fa fa-home"></i>
+                    <span>首页</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="#">
+                    <i class="fa fa-home"></i>
+                    <span>分类</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="#">
+                    <i class="fa fa-home"></i>
+                    <span>购物车</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="#" class="active">
+                    <i class="fa fa-home"></i>
+                    <span>个人中心</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MUI不依赖jQuery -->
+    <script src="./lib/mui/js/mui.min.js"></script>
+
+    <!-- 引入Zepto.js  移动端使用这个,pc端使用jquery-->
+    <script src="./lib/zepto/zepto.min.js"></script>
+
+    <!-- 引入自己的js文件 -->
+    <script src="./js/user.js"></script>
+</body>
+
+</html>

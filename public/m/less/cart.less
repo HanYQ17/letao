@@ -2,6 +2,8 @@
 
 #main {
     overflow: hidden;
+    height: 100%;
+    position: relative;
     .cart-list {
         .product {
             position: relative;
@@ -48,6 +50,30 @@
                 .product-params {
                     display: flex;
                     justify-content: space-between;
+                }
+            }
+        }
+    }
+}
+
+#order{
+    height: 0.35rem;
+    width: 100%;
+    background-color: pink;
+    .mui-card{
+        margin: 0;
+        .mui-card-header{
+            padding: 0;
+            .rental{
+                color:red;
+                font-size: .14rem;
+                margin-left: .2rem;
+            }
+            .btn_order{
+                .btn_ord{
+                    height: 0.35rem;
+                    font-size: .14rem;
+                    padding: .06rem .14rem;
                 }
             }
         }

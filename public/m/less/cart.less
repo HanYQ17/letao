@@ -4,6 +4,7 @@
     overflow: hidden;
     height: 100%;
     position: relative;
+    
     .cart-list {
         .product {
             position: relative;
@@ -77,5 +78,24 @@
                 }
             }
         }
+    }
+}
+
+// 修改编辑框里面的样式
+.mui-popup{
+    .product-size {
+        line-height: .28rem;
+        text-align: left;
+        .btn-size {
+            margin-bottom: .05rem;
+        }
+    }
+    .mui-table-view-cell{
+        padding: .11rem 0;
+       
+    }
+    .mui-table-view-cell:after {
+        left: 0;
+        background-color: #ccc;
     }
 }

@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./less/login.css">
 </head>
+
 <body>
-    自己写的乐淘PC后台登录
+    <form class="form-horizontal">
+        <img src="./images/my_logo.jpg" alt="">
+        <div class="form-group">
+            <label for="inputEmail3" class="col-xs-2 control-label">用户名</label>
+            <div class="col-xs-10">
+                <input type="email" class="form-control" id="inputEmail3" value="root" placeholder="请输入用户名">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-xs-2 control-label">密码</label>
+            <div class="col-xs-10">
+                <input type="password" class="form-control" id="inputPassword3" placeholder="请输入密码" value="123456">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-12">
+                <button type="button" class="btn btn-default btn-login btn-block">登录</button>
+            </div>
+        </div>
+    </form>
+
+
+
+
+
+
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/login.js"></script>
 </body>
+
 </html>

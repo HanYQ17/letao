@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div style="margin-top: 100px;">
+            <ul id="page"></ul>
+        </div>
+    </div>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap-paginator.js"></script>
+    <script type="text/javascript">
+            var currentPage = 1; //当前显示默认第几页
+            var totalPages = 25; //总页数
+            $("#page").bootstrapPaginator({
+                bootstrapMajorVersion: 3, //对应的bootstrap版本
+                currentPage: currentPage, //当前页数
+                numberOfPages: 5, //每次显示页数
+                totalPages: totalPages, //总页数
+                shouldShowPage: true,//是否显示该按钮
+                useBootstrapTooltip: true,
+                //点击事件
+                onPageClicked: function (event, originalEvent, type, page) {
+                    
+                    console.log(event);
+                    console.log(originalEvent);
+                    console.log(type);
+                    console.log(page);// page 表示你点击的每一页
+                }
+            })
+    </script>
+</body>
+
+</html>

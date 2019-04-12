@@ -188,3 +188,17 @@ h6 {
   font-size: .14rem;
   padding: .06rem .14rem;
 }
+.mui-popup .product-size {
+  line-height: .28rem;
+  text-align: left;
+}
+.mui-popup .product-size .btn-size {
+  margin-bottom: .05rem;
+}
+.mui-popup .mui-table-view-cell {
+  padding: .11rem 0;
+}
+.mui-popup .mui-table-view-cell:after {
+  left: 0;
+  background-color: #ccc;
+}
